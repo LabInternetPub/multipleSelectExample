@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Create Document</title>
+</head>
+<body>
+
+<div align="center">
+
+    <h1>New Note</h1>
+
+    <form method="POST" th:object="${document}">
+        <table>
+            <tr>
+                <td><label>Content</label>:</td>
+                <td><input type="text" th:field="*{content}"/></td>
+            </tr>
+            <tr>
+                <td><label>Tags</label>:</td>
+                <td><select th:multiple="multiple" th:name="tags" th:id="tags">
+                    <option th:each="tag : ${tags}" th:value="${tag}" th:text="${tag}"></option>
+                </select></td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Create document" />
+
+    </form>
+</div>
+</body>
+</html>
