@@ -10,7 +10,7 @@
     <li th:each="doc : ${documents}">
         <span th:text="${doc.content}"></span>
         <ul>
-            <li th:each="tag: ${doc.tags}" th:text="${tag}"></li>
+            <li th:each="tag: ${doc.tags}" th:text="${tag.name}"></li>
         </ul>
     </li>
 </ul>

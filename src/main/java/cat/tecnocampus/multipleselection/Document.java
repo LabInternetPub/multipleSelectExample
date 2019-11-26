@@ -1,10 +1,11 @@
 package cat.tecnocampus.multipleselection;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Document {
     private String content;
-    private List<String> tags;
+    private List<Tag> tags;
 
     public Document() {
     }
@@ -13,7 +14,7 @@ public class Document {
         this.content = content;
     }
 
-    public void setTags(List<String> tags) {
+    public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
 
@@ -21,7 +22,7 @@ public class Document {
         return content;
     }
 
-    public List<String> getTags() {
+    public List<Tag> getTags() {
         return tags;
     }
 }

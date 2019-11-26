@@ -19,8 +19,8 @@
             </tr>
             <tr>
                 <td><label>Tags</label>:</td>
-                <td><select th:multiple="multiple" th:name="tags" th:id="tags">
-                    <option th:each="tag : ${tags}" th:value="${tag}" th:text="${tag}"></option>
+                <td><select th:multiple="multiple" th:field="*{tags}" >
+                    <option th:each="tag : ${tags}" th:value="${tag.name}" th:text="${tag.name}"></option>
                 </select></td>
             </tr>
         </table>

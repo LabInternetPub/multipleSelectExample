@@ -5,24 +5,27 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class DomainController {
-    private List<String> tags;
+    private List<Tag> tags;
     private List<Document> documents;
 
     public DomainController() {
-        tags = Arrays.asList("one", "two", "three", "four", "five");
+
+        String[] arrayTags = {"one", "two", "three", "four", "five"};
+        tags = Arrays.stream(arrayTags).map(n -> new Tag(n)).collect(Collectors.toList());
 
         Document document = new Document();
-        document.setContent("First document");
-        document.setTags(Arrays.asList("one", "two"));
+        document.setContent("Hard-coded document");
+
+        document.setTags(tags.subList(0,3));
         documents = new ArrayList<>();
         documents.add(document);
-        System.out.println("tags: " + document.getTags());
     }
 
-    public void setTag (String tag) {
+    public void setTag (Tag tag) {
         this.tags.add(tag);
     }
 
@@ -30,7 +33,7 @@ public class DomainController {
         documents.add(document);
     }
 
-    public List<String> getTags() {
+    public List<Tag> getTags() {
         return tags;
     }
 
