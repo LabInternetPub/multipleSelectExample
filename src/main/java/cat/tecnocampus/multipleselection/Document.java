@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 public class Document {
     private String content;
     private List<Tag> tags;
+    private List<Reviwer> reviwers;
 
     public Document() {
     }
@@ -24,5 +25,13 @@ public class Document {
 
     public List<Tag> getTags() {
         return tags;
+    }
+
+    public List<Reviwer> getReviwers() {
+        return reviwers;
+    }
+
+    public void setReviwers(List<Reviwer> reviwers) {
+        this.reviwers = reviwers;
     }
 }

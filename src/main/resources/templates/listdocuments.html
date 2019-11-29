@@ -8,9 +8,14 @@
 <body>
 <ul>
     <li th:each="doc : ${documents}">
-        <span th:text="${doc.content}"></span>
+        <h2><span th:text="${doc.content}"></span></h2>
+        <h3>Tags</h3>
         <ul>
             <li th:each="tag: ${doc.tags}" th:text="${tag.name}"></li>
+        </ul>
+        <h3>Reviewers</h3>
+        <ul>
+            <li th:each="reviwer: ${doc.reviwers}" th:text="${reviwer.name} + ' ' + ${reviwer.secondName}"></li>
         </ul>
     </li>
 </ul>
