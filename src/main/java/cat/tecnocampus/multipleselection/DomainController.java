@@ -17,14 +17,14 @@ public class DomainController {
         String[] arrayTags = {"one", "two", "three", "four", "five"};
         tags = Arrays.stream(arrayTags).map(n -> new Tag(n)).collect(Collectors.toList());
 
-        List<Reviwer> reviwers = new ArrayList<>();
-        reviwers.add(new Reviwer("Josep", "Pepe"));
-        reviwers.add(new Reviwer("Natalia", "Lopez"));
-        reviwers.add(new Reviwer("Maria", "Josefa"));
+        List<Reviewer> reviewers = new ArrayList<>();
+        reviewers.add(new Reviewer("Josep", "Pepe"));
+        reviewers.add(new Reviewer("Natalia", "Lopez"));
+        reviewers.add(new Reviewer("Maria", "Josefa"));
 
         Document document = new Document();
         document.setContent("Hard-coded document");
-        document.setReviwers(reviwers);
+        document.setReviewers(reviewers);
 
         document.setTags(tags.subList(0,3));
         documents = new ArrayList<>();

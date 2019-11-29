@@ -1,12 +1,11 @@
 package cat.tecnocampus.multipleselection;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Document {
     private String content;
     private List<Tag> tags;
-    private List<Reviwer> reviwers;
+    private List<Reviewer> reviewers;
 
     public Document() {
     }
@@ -27,11 +26,11 @@ public class Document {
         return tags;
     }
 
-    public List<Reviwer> getReviwers() {
-        return reviwers;
+    public List<Reviewer> getReviewers() {
+        return reviewers;
     }
 
-    public void setReviwers(List<Reviwer> reviwers) {
-        this.reviwers = reviwers;
+    public void setReviewers(List<Reviewer> reviewers) {
+        this.reviewers = reviewers;
     }
 }

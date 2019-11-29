@@ -1,14 +1,14 @@
 package cat.tecnocampus.multipleselection;
 
-public class Reviwer {
+public class Reviewer {
     private String name;
     private String secondName;
 
-    public Reviwer() {
+    public Reviewer() {
 
     }
 
-    public Reviwer(String name, String secondName) {
+    public Reviewer(String name, String secondName) {
         this.name = name;
         this.secondName = secondName;
     }
